@@ -1,0 +1,59 @@
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form #f="ngForm" (ngSubmit)="login(f)" class="login100-form novalidate">
+					<span class="login100-form-title p-b-70">
+					  Welcome
+					</span>
+					<span class="login100-form-avatar">
+					  <img src="assets/img/login/avatar02.png" alt="AVATAR">
+					</span>
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+					  <input required ngModel name="username" #username = "ngModel" (blur)="onBlurMethod('usernameInput')" class="input100" id="usernameInput" type="text">
+					  <span class="focus-input100" data-placeholder="Username"></span>
+					  <div [hidden]="username.valid || username.pristine"
+					  class="alert alert-danger">
+				   username is required
+					  </div>
+					</div>
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+					  <input required ngModel name="password" #password = "ngModel" (blur)="onBlurMethod('passwordInput')" id="passwordInput" class="input100" type="password">
+					  <span class="focus-input100" data-placeholder="Password"></span>
+					  <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+					  password is required
+					  </div>
+					</div>
+					<div class="container-login100-form-btn">
+					  <p *ngIf="message" class="text-center error"> {{ message }}</p>
+					  <button type="submit" class="login100-form-btn">
+						Login
+					  </button>
+					</div>
+				  </form>
+				<ul class="login-more p-t-190">
+						<li class="m-b-8">
+							<span class="txt1">
+								Forgot
+							</span>
+
+							<a href="#" class="txt2">
+								Username / Password?
+							</a>
+						</li>
+
+						<li>
+							<span class="txt1">
+								Don’t have an account?
+							</span>
+
+							<a routerLink="/register" class="txt2">
+								Sign up
+							</a>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>

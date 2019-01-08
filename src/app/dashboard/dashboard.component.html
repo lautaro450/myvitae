@@ -1,0 +1,38 @@
+<div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a class="simple-text logo-normal">
+          D Portfolio
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink = '/dashboard'>
+              <i class="nc-icon nc-bank"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li routerLinkActive='active'>
+            <a routerLink = '/dashboard/edit'>
+              <i class="nc-icon nc-single-02"></i>
+              <p>Curriculum</p>
+            </a>
+          </li>
+          <li routerLinkActive='active'>
+            <a routerLink = '/dashboard/messages'>
+              <i class="nc-icon nc-email-85"></i>
+              <p>Messages</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
